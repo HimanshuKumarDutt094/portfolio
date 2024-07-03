@@ -17,7 +17,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ title, tech, liveLink, github
 
     return (
         <div className="mb-6">
-            <h4 className="font-bold mb-2">
+            <div className="font-bold mb-2">
                 {title} | {tech} |
                 <a className="underline mx-1" href={liveLink} target="_blank" rel="noopener noreferrer">Live</a> |
                 <a className="underline mx-1" href={githubLink} target="_blank" rel="noopener noreferrer">Github</a> |
@@ -27,7 +27,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ title, tech, liveLink, github
                 >
                     Preview
                 </button>
-            </h4>
+            </div>
             <ul className="list-disc pl-5">
                 {description.map((item, index) => (
                     <li key={index} className="mb-2">{item}</li>
