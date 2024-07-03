@@ -1,113 +1,104 @@
+import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
+import Link from "next/link";
+import { BiPhone } from "react-icons/bi";
+import { BsPhone, BsSuitcase, BsSuitcase2, BsSuitcaseFill } from "react-icons/bs";
+import { MdEmail } from "react-icons/md";
 
-export default function Home() {
+export default function Home () {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <div className=" w-full h-full">
+      <header className="p-2 m-2   contents text-4xl font-bold ">
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+        <h1 className=" flex justify-center ">Himanshu Kumar Dutt</h1>
+        <ul className="flex justify-center text-xs md:text-sm ml-1 md:gap-3">
+          <li className="underline flex "> <BsPhone className="mt-[0.1rem]" /> <a href="phoneto:+917982033205">7982033205</a> </li>
+          <li className="underline flex "> <GitHubLogoIcon /> <a target="_blank" href={`github.com/HimanshuKumarDutt094`} about="github link" >HimanshuKumarDutt094</a> </li>
+          <li className="underline flex"> <LinkedInLogoIcon /> <a href={`linkedin.com/in/himanshu-dutt-77`} about="linkedin  link" >Himanshu-Dutt-77</a> </li>
+          <li className="underline flex"> <BsSuitcaseFill /> <a href={`himanshudutt.tech`} about="porfolio link" >portfolio</a> </li>
+          <li className="underline flex"> <MdEmail /> <a href={`mailto:adasimobenio@gmail.com`} about="email link" >himanshu.dutt@himanshudutt.me</a> </li>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+        </ul>
+      </header>
+      <main className="p-6 w-full">
+        <h3 className="text-3xl  "> Education
+        </h3>
+        <hr className=" border-black border-[2px]" />
+        <table className=" ml-3 mr-3 mt-2  w-full  px-12" border={2} >
+          <tr className="flex justify-between">
+            <td className="font-bold">
+              Guru Gobing Singh Indraprastha University
+            </td>
+            <td> Aug 2021-June 2024</td>
+          </tr>
+          <tr className="flex text-gray-500 justify-between">
+            <td>
+              BCA with minor Specialization in ML and AI            </td>
+            <td>Current CGPA: 8.8</td>
+          </tr>
+          <tr className="flex justify-between">
+            <td className="font-bold">
+              Kamal Public School Vikaspuri
+            </td>
+            <td>  2019 - 2021</td>
+          </tr>
+          <tr className="flex text-gray-500 justify-between">
+            <td>
+              12th CBSE Boards (PCM-CS)
+            </td>
+          </tr>
+        </table>
+        <h3 className="text-3xl  "> Skills
+          <hr className=" border-black border-[2px]" />
+        </h3>
+        <ul className="mx-3 mt-2">
+          <li>
+            <b>
+              Languages:
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+            </b>
+            JavaScript, TypeScript, Python, Golang, HTML/CSS</li>
+          <li>
+            <b>
+              Frameworks:
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+            </b>
+            NextJS, SvelteKit</li>
+          <li>
+            <b>
+              Libraries:
+
+            </b>            ReactJS,
+            ExpressJS,
+            Socket.io,
+            Clerk Auth,
+            Shadcn,
+            NextUI
+          </li>
+          <li>
+            <b>
+              Databases:
+            </b>
+            MongoDB, SQL (SQLite, Postgres) </li>
+          <li>
+            <b>            Tools:
+            </b>
+            Git/GitHub,
+            VS Code,
+            Vercel,
+            AWS EC2,
+            Neovim (basics)
+          </li>
+        </ul>
+        <h3 className="text-3xl  "> Projects
+          <hr className=" border-black border-[2px]" />
+        </h3>
+        <ul>
+          <li></li>
+        </ul>
+      </main>
+      <footer></footer>
+    </div >
+  )
 }
