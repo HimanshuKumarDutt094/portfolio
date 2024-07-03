@@ -22,7 +22,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ title, tech, liveLink, github
                 <a className="underline mx-1" href={liveLink} target="_blank" rel="noopener noreferrer">Live</a> |
                 <a className="underline mx-1" href={githubLink} target="_blank" rel="noopener noreferrer">Github</a> |
                 <button
-                    className="underline mx-1 text-blue-500 hover:text-blue-700"
+                    className="underline mx-1 text-blue-600 hover:text-blue-700"
                     onClick={() => setShowPreview(true)}
                 >
                     Preview

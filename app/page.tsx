@@ -1,39 +1,38 @@
 import React from 'react';
-import Link from 'next/link';
 import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { BsPhone, BsSuitcaseFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import { Button } from '../components/ui/button';
-import dynamic from 'next/dynamic';
 import ProjectItem from '../components/project';
-
 
 export default function Home () {
   return (
     <div className="w-full min-h-screen bg-white text-black">
       <header className="p-4 text-center">
         <h1 className="text-3xl font-bold mb-2">Himanshu Kumar Dutt</h1>
-        <ul className="flex flex-wrap justify-center gap-4 text-sm">
-          {[
-            { icon: <BsPhone className="mr-1" />, text: "7982033205", href: "tel:+917982033205" },
-            { icon: <GitHubLogoIcon className="mr-1" />, text: "GitHub", href: "https://github.com/HimanshuKumarDutt094" },
-            { icon: <LinkedInLogoIcon className="mr-1" />, text: "LinkedIn", href: "https://linkedin.com/in/himanshu-dutt-77" },
-            { icon: <BsSuitcaseFill className="mr-1" />, text: "Portfolio", href: "https://himanshudutt.tech" },
-            { icon: <MdEmail className="mr-1" />, text: "Email", href: "mailto:himanshu.dutt@himanshudutt.me" },
-          ].map((item, index) => (
-            <li key={index} className="flex items-center">
-              <a href={item.href} className="flex items-center underline p-2" target="_blank" rel="noopener noreferrer">
-                {item.icon}
-                {item.text}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <nav aria-label="Contact information">
+          <ul className="flex flex-wrap justify-center gap-4 text-sm">
+            {[
+              { icon: <BsPhone aria-hidden="true" className="mr-1" />, text: "7982033205", href: "tel:+917982033205", ariaLabel: "Phone number" },
+              { icon: <GitHubLogoIcon aria-hidden="true" className="mr-1" />, text: "GitHub", href: "https://github.com/HimanshuKumarDutt094", ariaLabel: "GitHub profile" },
+              { icon: <LinkedInLogoIcon aria-hidden="true" className="mr-1" />, text: "LinkedIn", href: "https://linkedin.com/in/himanshu-dutt-77", ariaLabel: "LinkedIn profile" },
+              { icon: <BsSuitcaseFill aria-hidden="true" className="mr-1" />, text: "Portfolio", href: "https://himanshudutt.tech", ariaLabel: "Portfolio website" },
+              { icon: <MdEmail aria-hidden="true" className="mr-1" />, text: "Email", href: "mailto:himanshu.dutt@himanshudutt.me", ariaLabel: "Email address" },
+            ].map((item, index) => (
+              <li key={index}>
+                <a href={item.href} className="flex items-center underline p-2" target="_blank" rel="noopener noreferrer" aria-label={item.ariaLabel}>
+                  {item.icon}
+                  <span>{item.text}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </header>
 
       <main className="p-4">
         <Section title="Education">
-          <table className="w-full border-collapse">
+          <table className="w-full border-collapse" aria-label="Education history">
             <tbody>
               <EducationRow
                 institution="Guru Gobing Singh Indraprastha University"
@@ -52,7 +51,7 @@ export default function Home () {
         </Section>
 
         <Section title="Skills">
-          <ul className="list-disc pl-5">
+          <ul className="list-disc pl-5" aria-label="List of skills">
             <SkillItem title="Languages" skills="JavaScript, TypeScript, Python, Golang, HTML/CSS" />
             <SkillItem title="Frameworks" skills="NextJS, SvelteKit" />
             <SkillItem title="Libraries" skills="ReactJS, ExpressJS, Socket.io, Clerk Auth, Shadcn, NextUI" />
@@ -84,7 +83,6 @@ export default function Home () {
               "Uses WebTorrent for searching all streaming options over the internet, and display all resolutions to watch from."
             ]}
           />
-
         </Section>
 
         <Section title="Work Experience">
@@ -123,11 +121,11 @@ export default function Home () {
 }
 
 const Section: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
-  <div className="mb-6">
-    <h3 className="text-2xl font-bold mb-2">{title}</h3>
-    <hr className="border-black border-2 mb-4" />
+  <section className="mb-6" aria-labelledby={`section-${title.toLowerCase().replace(/\s+/g, '-')}`}>
+    <h2 id={`section-${title.toLowerCase().replace(/\s+/g, '-')}`} className="text-2xl font-bold mb-2">{title}</h2>
+    <hr className="border-black border-2 mb-4" aria-hidden="true" />
     {children}
-  </div>
+  </section>
 );
 
 const EducationRow: React.FC<{ institution: string; period: string; degree: string; grade: string }> = ({ institution, period, degree, grade }) => (
@@ -145,43 +143,30 @@ const EducationRow: React.FC<{ institution: string; period: string; degree: stri
 
 const SkillItem: React.FC<{ title: string; skills: string }> = ({ title, skills }) => (
   <li className="mb-2">
-    <b>{title}: </b>
-    {skills}
+    <span className="font-bold">{title}: </span>
+    <span>{skills}</span>
   </li>
 );
 
-// const ProjectItem: React.FC<{ title: string; tech: string; liveLink: string; githubLink: string; description: string[] }> = ({ title, tech, liveLink, githubLink, description }) => (
-//   <div className="mb-6">
-//     <h4 className="font-bold mb-2">
-//       {title} | {tech} | <a className="underline" href={liveLink} target="_blank" rel="noopener noreferrer">Live</a> | <a className="underline" href={githubLink} target="_blank" rel="noopener noreferrer">Github</a>
-//     </h4>
-//     <ul className="list-disc pl-5">
-//       {description.map((item, index) => (
-//         <li key={index} className="mb-2">{item}</li>
-//       ))}
-//     </ul>
-//   </div>
-// );
-
 const ExperienceItem: React.FC<{ company: string; position: string; period: string; responsibilities: string[] }> = ({ company, position, period, responsibilities }) => (
-  <div className="mb-6">
-    <h4 className="font-bold mb-2 flex justify-between flex-wrap">
+  <article className="mb-6">
+    <h3 className="font-bold mb-2 flex justify-between flex-wrap">
       <span>{company} | {position}</span>
       <span>{period}</span>
-    </h4>
-    <ul className="list-disc pl-5">
+    </h3>
+    <ul className="list-disc pl-5" aria-label={`Responsibilities at ${company}`}>
       {responsibilities.map((item, index) => (
         <li key={index} className="mb-2">{item}</li>
       ))}
     </ul>
-  </div>
+  </article>
 );
-const DialogProject = () => (
-  <dialog open>
-    <iframe src="https://watcher-mv.vercel.app/" className='w-full '></iframe>
-    <form method="dialog">
 
-      <Button>Ok</Button>
+const DialogProject = () => (
+  <dialog open aria-labelledby="dialog-title" aria-describedby="dialog-description">
+    <iframe src="https://watcher-mv.vercel.app/" className='w-full' title="WatchrMV Project Preview"></iframe>
+    <form method="dialog">
+      <Button aria-label="Close dialog">Ok</Button>
     </form>
   </dialog>
-)
+);
