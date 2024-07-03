@@ -3,6 +3,10 @@ import Link from 'next/link';
 import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { BsPhone, BsSuitcaseFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
+import { Button } from '../components/ui/button';
+import dynamic from 'next/dynamic';
+import ProjectItem from '../components/project';
+
 
 export default function Home () {
   return (
@@ -80,6 +84,7 @@ export default function Home () {
               "Uses WebTorrent for searching all streaming options over the internet, and display all resolutions to watch from."
             ]}
           />
+
         </Section>
 
         <Section title="Work Experience">
@@ -145,18 +150,18 @@ const SkillItem: React.FC<{ title: string; skills: string }> = ({ title, skills 
   </li>
 );
 
-const ProjectItem: React.FC<{ title: string; tech: string; liveLink: string; githubLink: string; description: string[] }> = ({ title, tech, liveLink, githubLink, description }) => (
-  <div className="mb-6">
-    <h4 className="font-bold mb-2">
-      {title} | {tech} | <a className="underline" href={liveLink} target="_blank" rel="noopener noreferrer">Live</a> | <a className="underline" href={githubLink} target="_blank" rel="noopener noreferrer">Github</a>
-    </h4>
-    <ul className="list-disc pl-5">
-      {description.map((item, index) => (
-        <li key={index} className="mb-2">{item}</li>
-      ))}
-    </ul>
-  </div>
-);
+// const ProjectItem: React.FC<{ title: string; tech: string; liveLink: string; githubLink: string; description: string[] }> = ({ title, tech, liveLink, githubLink, description }) => (
+//   <div className="mb-6">
+//     <h4 className="font-bold mb-2">
+//       {title} | {tech} | <a className="underline" href={liveLink} target="_blank" rel="noopener noreferrer">Live</a> | <a className="underline" href={githubLink} target="_blank" rel="noopener noreferrer">Github</a>
+//     </h4>
+//     <ul className="list-disc pl-5">
+//       {description.map((item, index) => (
+//         <li key={index} className="mb-2">{item}</li>
+//       ))}
+//     </ul>
+//   </div>
+// );
 
 const ExperienceItem: React.FC<{ company: string; position: string; period: string; responsibilities: string[] }> = ({ company, position, period, responsibilities }) => (
   <div className="mb-6">
@@ -171,3 +176,12 @@ const ExperienceItem: React.FC<{ company: string; position: string; period: stri
     </ul>
   </div>
 );
+const DialogProject = () => (
+  <dialog open>
+    <iframe src="https://watcher-mv.vercel.app/" className='w-full '></iframe>
+    <form method="dialog">
+
+      <Button>Ok</Button>
+    </form>
+  </dialog>
+)
