@@ -150,10 +150,10 @@ const SkillItem: React.FC<{ title: string; skills: string }> = ({ title, skills 
 
 const ExperienceItem: React.FC<{ company: string; position: string; period: string; responsibilities: string[] }> = ({ company, position, period, responsibilities }) => (
   <article className="mb-6">
-    <h3 className="font-bold mb-2 flex justify-between flex-wrap">
+    <h2 className="font-bold mb-2 flex justify-between flex-wrap">
       <span>{company} | {position}</span>
       <span>{period}</span>
-    </h3>
+    </h2>
     <ul className="list-disc pl-5" aria-label={`Responsibilities at ${company}`}>
       {responsibilities.map((item, index) => (
         <li key={index} className="mb-2">{item}</li>
