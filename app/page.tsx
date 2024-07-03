@@ -94,9 +94,49 @@ export default function Home () {
         <h3 className="text-3xl  "> Projects
           <hr className=" border-black border-[2px]" />
         </h3>
-        <ul>
-          <li></li>
-        </ul>
+        <div>
+          <ul className="list-disc">
+            <h4 className=""> <b>PdfChatBot</b> | Python,RapidAPI,LangChain,google generative ai,Typescript,ReactJS,ShadCnUI,Tailwind, | <a className="underline" href="https://pdf-chat-bot-wine.vercel.app/">Live</a> | <a className="underline" href="https://github.com/HimanshuKumarDutt094/PDFChatBot/tree/main">Github</a> </h4>
+            <li className="mx-5">
+              PdfChatBot is modern solution to chat with any pdf file with ai capabilities. Bulit with <b>python</b> and <b>rapidapi</b> as backbone with <b>langchain</b> and <b>google generative ai</b> library.
+
+            </li>
+            <li className="mx-5">
+              Frontend built with <b>vite+react</b> for fastest reaction and sleak components.
+              Uses ShadCn made dynamic componets to adapt to any screen.
+            </li>
+            <li className="mx-5">
+              uses <b>faiss cpu</b> for <b>vector embeddings</b>. and quick compilation of files.
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul className=" list-disc">
+            <h4> <b>WatchrMV</b> | SvelteKit,NodeJS,expressJS,axios,webtorrent,webtor,TMDB  | <a className="underline" href="https://watcher-mv.vercel.app/">Live</a> | <a className="underline" href="https://github.com/HimanshuKumarDutt094/watcher-mv/">Github</a> </h4>
+            <li className="mx-5">
+              WatcherMV is  one place to find an movie you want to browse, its experimented with <b>webtor</b> to display all possible watch options from aggregated sites on the internet.
+
+
+            </li>
+            <li className="mx-5">
+              Frontend built with <b>SvelteKit</b> one of the fastest javascript framework on par with SolidJS  with sleak ui , search bar capabilities, popular and trending sections.
+              Use of <b>Tailwind</b> enance the styling experience and ease to prototype.
+            </li>
+            <li className="mx-5">
+              uses <b>webtorrent </b> for searching all streaming options over the internet, and display all resolutions to watch from .
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="text-3xl  "> Work Experience
+            <hr className=" border-black border-[2px]" />
+          </h3>
+          <ul className="list-disc">
+            <li>
+
+            </li>
+          </ul>
+        </div>
       </main>
       <footer></footer>
     </div >
