@@ -5,7 +5,7 @@ import { MdEmail } from "react-icons/md";
 import { Button } from '../components/ui/button';
 import ProjectItem from '../components/project';
 
-export default function Home () {
+export default function Home() {
   return (
     <div className="w-full min-h-screen bg-white text-black">
       <header className="p-4 text-center">
@@ -16,7 +16,7 @@ export default function Home () {
               { icon: <BsPhone aria-hidden="true" className="mr-1" />, text: "7982033205", href: "tel:+917982033205", ariaLabel: "Phone number" },
               { icon: <GitHubLogoIcon aria-hidden="true" className="mr-1" />, text: "GitHub", href: "https://github.com/HimanshuKumarDutt094", ariaLabel: "GitHub profile" },
               { icon: <LinkedInLogoIcon aria-hidden="true" className="mr-1" />, text: "LinkedIn", href: "https://linkedin.com/in/himanshu-dutt-77", ariaLabel: "LinkedIn profile" },
-              { icon: <BsSuitcaseFill aria-hidden="true" className="mr-1" />, text: "Portfolio", href: "https://himanshudutt.tech", ariaLabel: "Portfolio website" },
+              { icon: <BsSuitcaseFill aria-hidden="true" className="mr-1" />, text: "Portfolio", href: "https://himanshudutt.me", ariaLabel: "Portfolio website" },
               { icon: <MdEmail aria-hidden="true" className="mr-1" />, text: "Email", href: "mailto:himanshu.dutt@himanshudutt.me", ariaLabel: "Email address" },
             ].map((item, index) => (
               <li key={index}>
@@ -29,7 +29,14 @@ export default function Home () {
           </ul>
         </nav>
       </header>
+      <main className="p-4">
+        <Section title="About Me">
+          <p>
+            Hello there, welcome to my generic portfolio, I'm Himanshu, started taking intrest in computer back in middleschool, but actually did my first code in highschool with python. I've always been obsessed with tech and find it really facinating, i love to dabble into random areas to se what's going on, currenly split between choosing ML (i hate maths but love internal working) and webdev (got 0 design sense but love to create random stuff). <br /> my techstack is weak as my adhd leads me to choose anything i find cool on youtube (golang and SvelteKit and currently trying out expo) </p>
+        </Section>
 
+
+      </main>
       <main className="p-4">
         <Section title="Education">
           <table className="w-full border-collapse" aria-label="Education history">
@@ -116,7 +123,7 @@ export default function Home () {
           </div>
         </Section>
       </footer>
-    </div>
+    </div >
   );
 }
 
