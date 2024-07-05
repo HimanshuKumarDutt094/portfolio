@@ -1,0 +1,71 @@
+{
+    "Home": {
+        "name": "Himanshu Kumar Dutt",
+        "contactInfo": "Contact information",
+        "phoneNumber": "Phone number",
+        "githubProfile": "GitHub profile",
+        "linkedinProfile": "LinkedIn profile",
+        "portfolio": "Portfolio",
+        "portfolioWebsite": "Portfolio website",
+        "email": "Email",
+        "emailAddress": "Email address",
+        "aboutMe": "About Me",
+        "aboutMeContent": " Hello there, welcome to my generic portfolio, I'm Himanshu, started taking intrest in computer back in middle school, but actually did my first code in highschool with python. I've always been obsessed with tech and find it really facinating, i love to dabble into random areas to se what's going on, currenly split between choosing ML (i hate maths but love internal working) and webdev (got 0 design sense but love to create random stuff).  my techstack is weak as my adhd leads me to choose anything i find cool on youtube (golang and SvelteKit and currently trying out expo) ",
+        "education": "Education",
+        "educationHistory": "Education history",
+        "university": "Guru Gobing Singh Indraprastha University",
+        "universityPeriod": "Aug 2021-June 2024",
+        "universityDegree": "BCA with minor Specialization in ML and AI",
+        "universityCGPA": "Current CGPA: {cgpa}",
+        "highSchool": "Kamal Public School Vikaspuri",
+        "highSchoolPeriod": "2019 - 2021",
+        "highSchoolDegree": "12th CBSE Boards (PCM-CS)",
+        "highSchoolGrade": "{grade}%",
+        "skills": "Skills",
+        "skillsList": "List of skills",
+        "languages": "Languages",
+        "languageSkills": "JavaScript, TypeScript, Python, Golang, HTML/CSS",
+        "frameworks": "Frameworks",
+        "frameworkSkills": "NextJS, SvelteKit",
+        "libraries": "Libraries",
+        "librarySkills": "ReactJS, ExpressJS, Socket.io, Clerk Auth, Shadcn, NextUI",
+        "databases": "Databases",
+        "databaseSkills": "MongoDB, SQL (SQLite, Postgres)",
+        "tools": "Tools",
+        "toolSkills": "Git/GitHub, VS Code, Vercel, AWS EC2, Neovim (basics)",
+        "projects": "Projects",
+        "project1Title": "PdfChatBot",
+        "project1Tech": "Python, RapidAPI, LangChain, Google Generative AI, TypeScript, ReactJS, ShadCnUI, Tailwind",
+        "project1Description": [
+            "PdfChatBot is modern solution to chat with any pdf file with AI capabilities. Built with Python and RapidAPI as backbone with LangChain and Google Generative AI library.",
+            "Frontend built with Vite+React for fastest reaction and sleek components. Uses ShadCn made dynamic components to adapt to any screen.",
+            "Uses FAISS CPU for vector embeddings and quick compilation of files."
+        ],
+        "project2Title": "WatchrMV",
+        "project2Tech": "SvelteKit, NodeJS, ExpressJS, Axios, WebTorrent, Webtor, TMDB",
+        "project2Description": [
+            "WatcherMV is one place to find a movie you want to browse, it's experimented with Webtor to display all possible watch options from aggregated sites on the internet.",
+            "Frontend built with SvelteKit, one of the fastest JavaScript frameworks on par with SolidJS with sleek UI, search bar capabilities, popular and trending sections. Use of Tailwind enhances the styling experience and ease to prototype.",
+            "Uses WebTorrent for searching all streaming options over the internet, and display all resolutions to watch from."
+        ],
+        "workExperience": "Work Experience",
+        "company1": "SAP Labs India",
+        "position1": "Developer Intern",
+        "period1": "July 2023 - September 2023",
+        "responsibilities1": [
+            "Feasibility study on whether live data can have currency conversion for team use case.",
+            "Used Java and Selenium to rewrite & improve previously written automation testing scripts.",
+            "Migration from Java 11 to Java 22 as well as Maven. Created custom reusable scripts to handle different use cases while testing. Reduced testing time to 5min for 3 different websites from 20min+."
+        ],
+        "company2": "RankFlys",
+        "position2": "MERN Stack Developer",
+        "period2": "May 2024 - July 2024",
+        "responsibilities2": [
+            "Worked as freelance developer to create and integrate AI-based NEET and JEE question doubt engine.",
+            "Used NodeJS, ExpressJS, NextJS, and Google Gemini 1.5 to create optimized solution with rate limits & authorizations.",
+            "Created file upload, camera upload, crop mechanism alongside sharp package to reduce file size for optimal performance."
+        ],
+        "certificates": "Certificates",
+        "certificatesList": "Generative AI | ML | Python | Golang"
+    }
+}

@@ -5,7 +5,7 @@ import { MdEmail } from "react-icons/md";
 import { Button } from '../components/ui/button';
 import ProjectItem from '../components/project';
 
-export default function Home() {
+export default function Home () {
   return (
     <div className="w-full min-h-screen bg-white text-black">
       <header className="p-4 text-center">
