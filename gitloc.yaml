@@ -2,8 +2,6 @@ config:
   defaultLocale: en
   locales:
     - en
-    - de
-    - hi
     - id
     - fr
     - es
