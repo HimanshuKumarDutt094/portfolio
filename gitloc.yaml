@@ -9,4 +9,4 @@ config:
     - de
 
   directories:
-    - /locales
+    - locales
