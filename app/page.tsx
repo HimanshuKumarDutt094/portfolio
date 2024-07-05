@@ -2,8 +2,9 @@ import React from 'react';
 import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { BsPhone, BsSuitcaseFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
-import { Button } from '../components/ui/button';
-import ProjectItem from '../components/project';
+import { Button } from '@/components/ui/button';
+import ProjectItem from '@/components/project';
+import { useTranslations } from 'next-intl';
 
 export default function Home () {
   return (
@@ -32,7 +33,7 @@ export default function Home () {
       <main className="p-4">
         <Section title="About Me">
           <p>
-            Hello there, welcome to my generic portfolio, I&apos;m Himanshu, started taking intrest in computer back in middle school, but actually did my first code in highschool with python. I&apos;ve always been obsessed with tech and find it really facinating, i love to dabble into random areas to se what&apos;s going on, currenly split between choosing ML (i hate maths but love internal working) and webdev (got 0 design sense but love to create random stuff). <br /> my techstack is weak as my adhd leads me to choose anything i find cool on youtube (golang and SvelteKit and currently trying out expo). </p>
+            Hello there, welcome to my generic portfolio, I'm Himanshu, started taking intrest in computer back in middleschool, but actually did my first code in highschool with python. I've always been obsessed with tech and find it really facinating, i love to dabble into random areas to se what's going on, currenly split between choosing ML (i hate maths but love internal working) and webdev (got 0 design sense but love to create random stuff). <br /> my techstack is weak as my adhd leads me to choose anything i find cool on youtube (golang and SvelteKit and currently trying out expo) </p>
         </Section>
 
 
@@ -61,7 +62,7 @@ export default function Home () {
           <ul className="list-disc pl-5" aria-label="List of skills">
             <SkillItem title="Languages" skills="JavaScript, TypeScript, Python, Golang, HTML/CSS" />
             <SkillItem title="Frameworks" skills="NextJS, SvelteKit" />
-            <SkillItem title="Libraries" skills="ReactJS, ExpressJS, RapidAPI, Socket.io, Clerk Auth, Shadcn, NextUI" />
+            <SkillItem title="Libraries" skills="ReactJS, ExpressJS, Socket.io, Clerk Auth, Shadcn, NextUI" />
             <SkillItem title="Databases" skills="MongoDB, SQL (SQLite, Postgres)" />
             <SkillItem title="Tools" skills="Git/GitHub, VS Code, Vercel, AWS EC2, Neovim (basics)" />
           </ul>
@@ -169,11 +170,3 @@ const ExperienceItem: React.FC<{ company: string; position: string; period: stri
   </article>
 );
 
-const DialogProject = () => (
-  <dialog open aria-labelledby="dialog-title" aria-describedby="dialog-description">
-    <iframe src="https://watcher-mv.vercel.app/" className='w-full' title="WatchrMV Project Preview"></iframe>
-    <form method="dialog">
-      <Button aria-label="Close dialog">Ok</Button>
-    </form>
-  </dialog>
-);
