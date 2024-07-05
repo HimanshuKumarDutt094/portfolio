@@ -6,7 +6,6 @@ config:
     - hi
     - id
     - fr
-    - de
-
+    - es
   directories:
-    - locales/
+    - locales
