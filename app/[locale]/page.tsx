@@ -44,7 +44,7 @@ export default function Home ({ params: { locale } }: { params: { locale: string
                 institution={t('university')}
                 period={t('universityPeriod')}
                 degree={t('universityDegree')}
-                grade={t('universityCGPA', { cgpa: 8.8 })}
+                grade={t('universityCGPA', { cgpa: 9.1 })}
               />
               <EducationRow
                 institution={t('highSchool')}
