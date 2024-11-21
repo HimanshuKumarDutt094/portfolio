@@ -33,9 +33,7 @@ export default function Home ({ params: { locale } }: { params: { locale: string
         </nav>
       </header>
       <main className="p-4">
-        <Section title={t('aboutMe')}>
-          <p>{t('aboutMeContent')}</p>
-        </Section>
+       
 
         <Section title={t('education')}>
           <table className="w-full border-collapse" aria-label={t('educationHistory')}>
