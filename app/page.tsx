@@ -30,14 +30,7 @@ export default function Home () {
           </ul>
         </nav>
       </header>
-      <main className="p-4">
-        <Section title="About Me">
-          <p>
-            Hello there, welcome to my generic portfolio, I&apos;m Himanshu, started taking intrest in computer back in middleschool, but actually did my first code in highschool with python. I&apos;ve always been obsessed with tech and find it really facinating, i love to dabble into random areas to se what&apos;s going on, currenly split between choosing ML (i hate maths but love internal working) and webdev (got 0 design sense but love to create random stuff). <br /> my techstack is weak as my adhd leads me to choose anything i find cool on youtube (golang and SvelteKit and currently trying out expo) </p>
-        </Section>
-
-
-      </main>
+      
       <main className="p-4">
         <Section title="Education">
           <table className="w-full border-collapse" aria-label="Education history">
