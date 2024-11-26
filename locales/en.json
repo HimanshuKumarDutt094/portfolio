@@ -13,7 +13,7 @@
         "aboutMeContent": " Hello there, welcome to my portfolio, I'm Himanshu, started taking interest in computer back in middle school, but actually did my first code in highschool with python. I've always been obsessed with tech and find it really facinating, I love to dabble into random areas to see what's going on, currenly doing  webdev (love to create random stuff).  my techstack is a bit random (sorry in advance) as my adhd leads me to choose anything i find cool on youtube (golang, SvelteKit and currently trying out expo for android app), but have come to like nextJS a lot. ",
         "education": "Education",
         "educationHistory": "Education history",
-        "university": "Guru Gobing Singh Indraprastha University",
+        "university": "Institute of Innovation in Technology and Management (under GGSIPU)",
         "universityPeriod": "Aug 2021-June 2024",
         "universityDegree": "BCA with minor Specialization in ML and AI",
         "universityCGPA": "Current CGPA: {cgpa}",
