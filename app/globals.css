@@ -74,3 +74,56 @@
     @apply bg-background text-foreground;
   }
 }
+@media print {
+  /* General page settings */
+  @page {
+    margin: 1cm;
+    size: A4;
+  }
+
+  /* Remove extra paddings, margins, and unnecessary elements */
+  body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .w-full.min-h-screen {
+    min-height: auto;
+  }
+
+  /* Scale content to fit */
+  .w-full {
+    zoom: 0.8; /* Adjust the zoom level if content overflows */
+  }
+
+  /* Prevent page breaks in critical sections */
+  header, main, footer, section {
+    break-inside: avoid;
+  }
+
+  /* Remove interactive elements for printing */
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  a::after {
+    content: "";
+  }
+
+  /* Fine-tune fonts for printing */
+  h1, h2, h3, h4 {
+    margin: 0;
+  }
+
+  ul, li, p, table {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Hide or adjust background colors for print */
+  .bg-white {
+    background: white !important;
+  }
+}
