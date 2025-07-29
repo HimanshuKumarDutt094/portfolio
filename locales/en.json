@@ -67,11 +67,12 @@
     ],
     "company3": "Nextfly Technologies",
     "position3": "Full Stack Developer",
-    "period3": "Jan 2025 - Apr 2025",
+    "period3": "Jan 2025 - July 2025",
     "responsibilities3": [
       "Responsible for building plemie a multi tenant platform for social gigs. Used turborepo to build customer facing, admin facing and seller facing dashboard. Real-time chat with Server Sent Events. Integrated payout system with Razorpay. Built cross platform React Native app with Expo. Added role based admin to admin management.",
       "Used payload CMS to build mybooze.in. Worked with monorepos with NextJS, trpc to build end to end applications.",
-      "Updated and migrated old codebase with new React 19 and NextJS 15 features and optimizations."
+      "Updated and migrated old codebase with new React 19 and NextJS 15 features and optimizations.",
+      "created multiple fullstack web project monorepo + helped in creation of 2 react native apps."
     ],
     "certificates": "Certificates",
     "certificatesList": "Generative AI | ML | Python | Golang"
