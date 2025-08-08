@@ -41,7 +41,7 @@ export default function Home({
               {
                 icon: <BsSuitcaseFill aria-hidden="true" className="mr-1" />,
                 text: t("portfolio"),
-                href: "https://himanshudutt.me",
+                href: "https://v0-himanshu-portfolio-peach.vercel.app/",
                 ariaLabel: t("portfolioWebsite"),
               },
               {
