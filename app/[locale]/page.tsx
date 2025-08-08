@@ -47,7 +47,7 @@ export default function Home({
               {
                 icon: <MdEmail aria-hidden="true" className="mr-1" />,
                 text: t("email"),
-                href: "mailto:himanshu.dutt@himanshudutt.me",
+                href: "mailto:adasimobenio@gmail.com",
                 ariaLabel: t("emailAddress"),
               },
             ].map((item, index) => (
