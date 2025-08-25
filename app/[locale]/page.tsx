@@ -1,11 +1,9 @@
-import React from "react";
+import ProjectItem from "@/components/project";
 import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
+import { useTranslations } from "next-intl";
+import React from "react";
 import { BsPhone, BsSuitcaseFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
-import { Button } from "@/components/ui/button";
-import ProjectItem from "@/components/project";
-import { useTranslations } from "next-intl";
-import { NumberFormatOptions } from "next-intl";
 export default function Home({
   params: { locale },
 }: {
@@ -104,16 +102,19 @@ export default function Home({
           <ProjectItem
             title={t("project1Title")}
             tech={t("project1Tech")}
-            liveLink="https://pdf-chat-bot-wine.vercel.app/"
-            githubLink="https://github.com/HimanshuKumarDutt094/PDFChatBot/tree/main"
+            liveLink="https://steelonmobile.com"
+            githubLink={[]}
             description={t.raw("project1Description")}
           />
           <ProjectItem
             title={t("project2Title")}
             tech={t("project2Tech")}
-            liveLink="https://watcher-mv.vercel.app/"
-            githubLink="https://github.com/HimanshuKumarDutt094/watcher-mv/"
+            githubLink={[
+              "https://github.com/HimanshuKumarDutt094/vite-starter",
+              "https://github.com/HimanshuKumarDutt094/create-express-starter-ts",
+            ]}
             description={t.raw("project2Description")}
+            preview={false}
           />
         </Section>
 
@@ -214,11 +215,12 @@ const ExperienceItem: React.FC<{
       className="list-disc pl-5"
       aria-label={`Responsibilities at ${company}`}
     >
-      {responsibilities.map((item, index) => (
-        <li key={index} className="mb-2">
-          {item}
-        </li>
-      ))}
+      {Array.isArray(responsibilities) &&
+        responsibilities.map((item, index) => (
+          <li key={index} className="mb-2">
+            {item}
+          </li>
+        ))}
     </ul>
   </article>
 );
