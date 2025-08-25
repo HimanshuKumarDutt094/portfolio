@@ -122,10 +122,10 @@ export default function Home({
 
         <Section title={t("workExperience")}>
           <ExperienceItem
-            company={t("company1")}
-            position={t("position1")}
-            period={t("period1")}
-            responsibilities={t.raw("responsibilities1")}
+            company={t("company3")}
+            position={t("position3")}
+            period={t("period3")}
+            responsibilities={t.raw("responsibilities3")}
           />
           <ExperienceItem
             company={t("company2")}
@@ -134,10 +134,10 @@ export default function Home({
             responsibilities={t.raw("responsibilities2")}
           />
           <ExperienceItem
-            company={t("company3")}
-            position={t("position3")}
-            period={t("period3")}
-            responsibilities={t.raw("responsibilities3")}
+            company={t("company1")}
+            position={t("position1")}
+            period={t("period1")}
+            responsibilities={t.raw("responsibilities1")}
           />
         </Section>
       </main>
