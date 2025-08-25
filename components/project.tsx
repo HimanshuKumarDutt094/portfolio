@@ -8,7 +8,7 @@ interface ProjectItemProps {
   title: string;
   tech: string;
   liveLink?: string;
-  githubLink: string[];
+  githubLink?: string[];
   description: string[];
   preview?: boolean;
 }
@@ -24,8 +24,8 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
   const [showPreview, setShowPreview] = React.useState(false);
 
   return (
-    <div className="mb-6">
-      <div className="font-bold mb-2">
+    <div className="mb-6 print:mb-0">
+      <div className="font-bold mb-2 print:mb-0">
         {title} | {tech} {liveLink && ` | `}
         {liveLink && (
           <a
@@ -37,7 +37,8 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
             Live
           </a>
         )}
-        {githubLink.length > 0 &&
+        {githubLink &&
+          githubLink.length > 0 &&
           githubLink?.map((l) => (
             <span key={l}>
               |{" "}
@@ -62,9 +63,9 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
           </button>
         )}
       </div>
-      <ul className="list-disc pl-5">
+      <ul className="list-disc pl-5 print:pl-5">
         {description.map((item, index) => (
-          <li key={index} className="mb-2">
+          <li key={index} className="mb-2 print:mb-0">
             {item}
           </li>
         ))}
