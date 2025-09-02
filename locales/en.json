@@ -24,11 +24,11 @@
     "skills": "Skills",
     "skillsList": "List of skills",
     "languages": "Languages",
-    "languageSkills": "JavaScript, TypeScript, Python, Golang, HTML/CSS",
+    "languageSkills": "JavaScript, TypeScript, Python, Golang",
     "frameworks": "Frameworks",
     "frameworkSkills": "NextJS, SvelteKit, Expo",
     "libraries": "Libraries",
-    "librarySkills": "ReactJS, ExpressJS, Socket.io, React Native, ShadcnUI, React Router,payloadCMS",
+    "librarySkills": "ReactJS, ExpressJS, Socket.io, React Native, ShadcnUI, React Router, PayloadCMS, FastAPI",
     "databases": "Databases",
     "databaseSkills": "MongoDB, SQL (SQLite, Postgres)",
     "tools": "Tools",
@@ -55,8 +55,7 @@
     "position1": "Developer Intern",
     "period1": "July 2023 - September 2023",
     "responsibilities1": [
-      "Feasibility study on whether live data can have currency conversion for team use case.",
-      "Used Java and Selenium to rewrite & improve previously written automation testing scripts.",
+      "Feasibility study on whether live data can have currency conversion for team use case. Used Java and Selenium to rewrite & improve previously written automation testing scripts.",
       "Migration from Java 11 to Java 22 as well as Maven. Created custom reusable scripts to handle different use cases while testing. Reduced testing time to 5min for 3 different websites from 20min+."
     ],
     "company2": "RankFlys",
@@ -64,15 +63,14 @@
     "period2": "May 2024 - July 2024",
     "responsibilities2": [
       "Worked as freelance developer to create and integrate AI-based NEET and JEE question doubt engine.",
-      "Used NodeJS, ExpressJS, NextJS, and Google Gemini 1.5 to create optimized solution with rate limits & authorizations.",
-      "Created file upload, camera upload, crop mechanism alongside sharp package to reduce file size for optimal performance."
+      "Used NodeJS, ExpressJS, NextJS, and Google Gemini 1.5 to create optimized solution with rate limits & authorizations. Created file upload, camera upload, crop mechanism alongside sharp package to reduce file size for optimal performance."
     ],
     "company3": "Nextfly Technologies",
     "position3": "Full Stack Developer",
     "period3": "Jan 2025 - July 2025",
     "responsibilities3": [
       "Engineered plemie - a comprehensive social gigs platform, developing both a responsive web application and a cross-platform mobile app using Expo React Native. Implemented real-time chat functionality using Server-Sent Events (SSE) with tRPC, and a secure payout system with a custom Razorpay X package. Built dedicated dashboards for gig artists and customers.",
-      "Engineered fluidpe - a loan application platform, developing the customer-facing mobile experience using Expo React Native, tRPC, and React Query with Zustand for state management. Integrated OneSignal for real-time notifications.",
+      "Engineered fluidpe - a loan application platform, developing the customer-facing mobile experience using Expo React Native, tRPC, and React Query with Zustand for state management. Integrated OneSignal for real-time notifications. Created end to end loan application flow using finsire as well as helped created multiple dashboard for different role users.",
       "Contributed to the MyDeer project by restructuring the mobile app's architecture within a monorepo. Provided initial development support for the Scraplo mobile app, creating foundational tab and sidebar navigation.",
       "Developed MyBooze, an e-commerce platform using Next.js and Payload CMS. Helped migrate the admastery.in e-learning project to optimize images and blogs for better performance."
     ],
