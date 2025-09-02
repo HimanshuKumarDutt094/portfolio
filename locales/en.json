@@ -34,7 +34,6 @@
     "tools": "Tools",
     "toolSkills": "Git/GitHub, VS Code, Vercel, AWS EC2, Neovim (basics)",
     "projects": "Projects",
-
     "project1Title": "SteelOnMobile - Steel Products Management System",
     "project1Tech": "Next.js 14, React 18, TypeScript, Tailwind CSS, MongoDB, Mongoose, JWT, UploadThing, Radix UI, Zustand",
     "project1Description": [
@@ -43,7 +42,6 @@
       "Features drag-and-drop file uploads, real-time search/filtering, and a responsive design using Tailwind CSS and Radix UI components.",
       "Leverages MongoDB with Mongoose for efficient data modeling and Zustand for client-side state management."
     ],
-
     "project2Title": "Create Vite Starter TS · Create Express Starter TS",
     "project2Tech": "@clack/prompts, consola, execa, fs-extra, gradient-string, react, jsonc-parser, picocolors, typescript",
     "project2Description": [
@@ -73,12 +71,13 @@
     "position3": "Full Stack Developer",
     "period3": "Jan 2025 - July 2025",
     "responsibilities3": [
-      "Responsible for building plemie a multi tenant platform for social gigs. Used turborepo to build customer facing, admin facing and seller facing dashboard. Real-time chat with Server Sent Events. Integrated payout system with Razorpay. Built cross platform React Native app with Expo. Added role based admin to admin management.",
-      "Used payload CMS to enhance and add new features to admastery.in. Worked with monorepos with NextJS, trpc to build end to end applications.",
-      "Updated and migrated old codebase with new React 19 and NextJS 15 features and optimizations.",
-      "created multiple fullstack web project monorepo + helped in creation of 2 react native apps."
+      "Engineered plemie - a comprehensive social gigs platform, developing both a responsive web application and a cross-platform mobile app using Expo React Native. Implemented real-time chat functionality using Server-Sent Events (SSE) with tRPC, and a secure payout system with a custom Razorpay X package. Built dedicated dashboards for gig artists and customers.",
+      "Engineered fluidpe - a loan application platform, developing the customer-facing mobile experience using Expo React Native, tRPC, and React Query with Zustand for state management. Integrated OneSignal for real-time notifications.",
+      "Contributed to the MyDeer project by restructuring the mobile app's architecture within a monorepo. Provided initial development support for the Scraplo mobile app, creating foundational tab and sidebar navigation.",
+      "Developed MyBooze, an e-commerce platform using Next.js and Payload CMS. Helped migrate the admastery.in e-learning project to optimize images and blogs for better performance."
     ],
     "certificates": "Certificates",
     "certificatesList": "Generative AI | ML | Python | Golang"
   }
 }
+
