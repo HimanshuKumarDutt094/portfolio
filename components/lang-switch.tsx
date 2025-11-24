@@ -20,7 +20,7 @@
 //                 onChange={changeLanguage}
 //                 value={router.locale}
 //                 aria-label={t('selectLanguage')}
-//                 className="p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+//                 className="p-2 border rounded-md focus:outline-hidden focus:ring-2 focus:ring-blue-500"
 //             >
 //                 <option value="en">{t('english')}</option>
 //                 <option value="hi">{t('hindi')}</option>

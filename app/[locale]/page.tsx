@@ -1,15 +1,23 @@
 import ProjectItem from "@/components/project";
 import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import React from "react";
 import { BsPhone, BsSuitcaseFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
-export default function Home({
-  params: { locale },
+
+// Generate static params for all locales at build time
+export const generateStaticParams = () => {
+  const locales = ["en", "id", "es", "fr"];
+  return locales.map((locale) => ({ locale }));
+};
+
+export default async function Home({
+  params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const t = useTranslations("Home");
+  const { locale } = await params;
+  const t = await getTranslations("Home");
 
   return (
     <div className="w-full min-h-screen bg-white text-black print:block print:min-h-0 print:p-2">
@@ -105,18 +113,18 @@ export default function Home({
           <ProjectItem
             title={t("project1Title")}
             tech={t("project1Tech")}
-            liveLink="https://steelonmobile.com"
+            githubLink={[
+              "https://github.com/HimanshuKumarDutt094/tanstack-dexie-db-collection",
+            ]}
+            liveLink="https://tanstack.com/db/latest/docs/community/resources"
             description={t.raw("project1Description")}
           />
           <ProjectItem
             title={t("project2Title")}
             tech={t("project2Tech")}
-            githubLink={[
-              "https://github.com/HimanshuKumarDutt094/vite-starter",
-              "https://github.com/HimanshuKumarDutt094/create-express-starter-ts",
-            ]}
+            githubLink={["https://github.com/HimanshuKumarDutt094/cutfast"]}
+            liveLink="https://cutfast-extension.vercel.app/"
             description={t.raw("project2Description")}
-            preview={false}
           />
         </Section>
 

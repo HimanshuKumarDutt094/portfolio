@@ -45,7 +45,7 @@ const Dialog: React.FC<DialogProps> = ({ url, onClose }) => {
                         Close
                     </button>
                 </div>
-                <div className="flex-grow overflow-hidden">
+                <div className="grow overflow-hidden">
                     <div style={{
                         width: '100%',
                         height: '100%',
