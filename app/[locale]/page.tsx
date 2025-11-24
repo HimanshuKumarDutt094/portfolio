@@ -20,19 +20,14 @@ export default async function Home({
     const t = await getTranslations("Home");
 
     return (
-        <div className="w-full min-h-screen bg-white text-black print:block print:min-h-0 print:p-2">
+        <div className="w-full min-h-screen bg-white text-black print:block print:min-h-0 print:p-4">
             <main className="p-4 print:p-2 print:space-y-2">
                 <header className="p-4 print:p-0 text-center">
-                    <h1 className="text-3xl font-bold mb-2 print:mb-0">{t("name")}</h1>
+                    <h1 className="text-3xl font-bold mb-2 print:mb-2">{t("name")}</h1>
                     <nav aria-label={t("contactInfo")}>
                         <ul className="flex flex-wrap justify-center gap-4 text-sm">
                             {[
-                                {
-                                    icon: <BsPhone aria-hidden="true" className="mr-1" />,
-                                    text: "7982033205",
-                                    href: "tel:+917982033205",
-                                    ariaLabel: t("phoneNumber"),
-                                },
+                            
                                 {
                                     icon: <GitHubLogoIcon aria-hidden="true" className="mr-1" />,
                                     text: "GitHub",
@@ -55,7 +50,7 @@ export default async function Home({
                                 },
                                 {
                                     icon: <MdEmail aria-hidden="true" className="mr-1" />,
-                                    text: t("adasimobenio@gmail.com"),
+                                    text: "adasimobenio@gmail.com",
                                     href: "mailto:adasimobenio@gmail.com",
                                     ariaLabel: t("emailAddress"),
                                 },
@@ -77,26 +72,25 @@ export default async function Home({
                     </nav>
                 </header>
 
-                <Section title={t("education")}>
-                    <table
-                        className="w-full border-collapse"
-                        aria-label={t("educationHistory")}
-                    >
-                        <tbody>
-                            <EducationRow
-                                institution={t("university")}
-                                period={t("universityPeriod")}
-                                degree={t("universityDegree")}
-                                grade={t("universityCGPA", { cgpa: 9.1 })}
-                            />
-                            <EducationRow
-                                institution={t("highSchool")}
-                                period={t("highSchoolPeriod")}
-                                degree={t("highSchoolDegree")}
-                                grade={t("highSchoolGrade", { grade: 88.8 })}
-                            />
-                        </tbody>
-                    </table>
+                <Section title={t("workExperience")}>
+                    <ExperienceItem
+                        company={t("company3")}
+                        position={t("position3")}
+                        period={t("period3")}
+                        responsibilities={t.raw("responsibilities3")}
+                    />
+                    <ExperienceItem
+                        company={t("company2")}
+                        position={t("position2")}
+                        period={t("period2")}
+                        responsibilities={t.raw("responsibilities2")}
+                    />
+                    <ExperienceItem
+                        company={t("company1")}
+                        position={t("position1")}
+                        period={t("period1")}
+                        responsibilities={t.raw("responsibilities1")}
+                    />
                 </Section>
 
                 <Section title={t("skills")}>
@@ -128,25 +122,22 @@ export default async function Home({
                     />
                 </Section>
 
-                <Section title={t("workExperience")}>
-                    <ExperienceItem
-                        company={t("company3")}
-                        position={t("position3")}
-                        period={t("period3")}
-                        responsibilities={t.raw("responsibilities3")}
-                    />
-                    <ExperienceItem
-                        company={t("company2")}
-                        position={t("position2")}
-                        period={t("period2")}
-                        responsibilities={t.raw("responsibilities2")}
-                    />
-                    <ExperienceItem
-                        company={t("company1")}
-                        position={t("position1")}
-                        period={t("period1")}
-                        responsibilities={t.raw("responsibilities1")}
-                    />
+
+                <Section title={t("education")}>
+                    <div className="space-y-4 print:space-y-2" aria-label={t("educationHistory")}>
+                        <EducationRow
+                            institution={t("university")}
+                            period={t("universityPeriod")}
+                            degree={t("universityDegree")}
+                            grade={t("universityCGPA", { cgpa: 9.1 })}
+                        />
+                        <EducationRow
+                            institution={t("highSchool")}
+                            period={t("highSchoolPeriod")}
+                            degree={t("highSchoolDegree")}
+                            grade={t("highSchoolGrade", { grade: 88.8 })}
+                        />
+                    </div>
                 </Section>
             </main>
 
@@ -171,11 +162,11 @@ const Section: React.FC<{ title: string; children: React.ReactNode }> = ({
     >
         <h2
             id={`section-${title.toLowerCase().replace(/\s+/g, "-")}`}
-            className="text-2xl font-bold mb-2 print:mb-0"
+            className="text-2xl font-bold mb-2 print:mb-2"
         >
             {title}
         </h2>
-        <hr className="border-black border-2 mb-4 print:mb-0" aria-hidden="true" />
+        <hr className="border-black border-2 mb-4 print:mb-2" aria-hidden="true" />
         {children}
     </section>
 );
@@ -186,23 +177,23 @@ const EducationRow: React.FC<{
     degree: string;
     grade: string;
 }> = ({ institution, period, degree, grade }) => (
-    <tr className="w-full">
-        <td className="w-1/2 align-top pr-4">
-            <div className="font-bold">{institution}</div>
-            <div className="text-gray-500">{degree}</div>
-        </td>
-        <td className="w-1/2 align-top text-right pl-4">
-            <div>{period}</div>
-            {grade && <div className="text-gray-500">{grade}</div>}
-        </td>
-    </tr>
+    <div className="flex justify-between items-start gap-4 print:gap-2">
+        <div className="flex-1">
+            <div className="font-bold text-base print:text-base">{institution}</div>
+            <div className="text-gray-500 text-sm print:text-sm">{degree}</div>
+        </div>
+        <div className="text-right flex-shrink-0">
+            <div className="text-sm print:text-sm">{period}</div>
+            {grade && <div className="text-gray-500 text-sm print:text-sm">{grade}</div>}
+        </div>
+    </div>
 );
 
 const SkillItem: React.FC<{ title: string; skills: string }> = ({
     title,
     skills,
 }) => (
-    <li className="mb-2 print:mb-0">
+    <li className="mb-2 print:mb-2">
         <span className="font-bold">{title}: </span>
         <span>{skills}</span>
     </li>
@@ -214,8 +205,8 @@ const ExperienceItem: React.FC<{
     period: string;
     responsibilities: string[];
 }> = ({ company, position, period, responsibilities }) => (
-    <article className="mb-6 print:mb-0">
-        <h2 className="font-bold mb-2 print:mb-0 flex justify-between flex-wrap">
+    <article className="mb-6 print:mb-4">
+        <h2 className="font-bold mb-2 print:mb-2 flex justify-between flex-wrap">
             <span>
                 {company} | {position}
             </span>
@@ -227,7 +218,7 @@ const ExperienceItem: React.FC<{
         >
             {Array.isArray(responsibilities) &&
                 responsibilities.map((item, index) => (
-                    <li key={index} className="mb-2 print:mb-0">
+                    <li key={index} className="mb-2 print:mb-2">
                         {item}
                     </li>
                 ))}
